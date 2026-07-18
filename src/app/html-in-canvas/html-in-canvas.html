@@ -1,0 +1,10 @@
+<canvas #canvas width="400" height="300" layoutsubtree (paint)="canvasPaint($event)">
+  <div #content class="content">
+    <h2>{{ title() }}</h2>
+    <p>{{ text() }}</p>
+    <input type="text" placeholder="テキストを入力" [(ngModel)]="text" />
+  </div>
+</canvas>
+
+<button (click)="clickBtn()">テキストを変更</button>
+<button (click)="filter()">フィルターを適用</button>
